@@ -1,5 +1,5 @@
 let today = new Date(0);
-today.setUTCSeconds(window.performance.timeOrigin)
+today.setUTCSeconds(window.performance.timeOrigin/1000)
 document.getElementById("info").innerHTML += "<b>User agent</b>: "+window.navigator.userAgent+"<br>";
 document.getElementById("info").innerHTML += "<b>App name</b>: "+window.navigator.appCodeName+"<br>";
 document.getElementById("info").innerHTML += "<b>App Version</b>: "+window.navigator.appVersion+"<br>";
@@ -13,3 +13,6 @@ document.getElementById("info").innerHTML += "<b>Origin</b>: "+window.origin+"<b
 document.getElementById("info").innerHTML += "<b>outerHeight</b>: "+window.outerHeight+"<br>";
 document.getElementById("info").innerHTML += "<b>outerWidth</b>: "+window.outerWidth+"<br>";
 document.getElementById("info").innerHTML += "<b>Time Origin</b>: "+today+"<br>";
+document.getElementById("info").innerHTML += "<b>Epoch</b>: "+window.performance.timeOrigin+"<br>";
+document.getElementById("info").innerHTML += "<b>Cookie</b>: "+document.cookie+"<br>";
+document.getElementById("info").innerHTML += "<b>Server Name</b>: "+window.location.href+"<br>";
